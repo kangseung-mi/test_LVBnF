@@ -1197,11 +1197,11 @@ img {
   gap: 24px;
 }
 
-.footer-community,
+/* .footer-community,
 .customer-center,
 .footer-links {
   margin-top: 24px;
-}
+} */
 
 .footer h3 {
   margin: 0 0 16px;
