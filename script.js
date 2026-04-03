@@ -1,5 +1,8 @@
 const scrollTopButton = document.getElementById("scrollTopButton");
 const stickyHeader = document.getElementById("stickyHeader");
+const menuOverlay = document.getElementById("menuOverlay");
+const menuCloseButton = document.getElementById("menuCloseButton");
+const menuOpenButtons = Array.from(document.querySelectorAll("[data-menu-open]"));
 const heroSection = document.getElementById("heroSection");
 const heroTrack = document.getElementById("heroTrack");
 const heroSlider = document.getElementById("heroSlider");
@@ -14,6 +17,36 @@ const magazineStage = document.getElementById("magazineStage");
 const magazineStack = document.getElementById("magazineStack");
 const magazineCards = Array.from(document.querySelectorAll("[data-magazine-card]"));
 const magazineOutro = document.querySelector(".magazine-outro");
+
+if (menuOverlay && menuOpenButtons.length) {
+  const setMenuOpen = (isOpen) => {
+    menuOverlay.classList.toggle("is-open", isOpen);
+    menuOverlay.setAttribute("aria-hidden", String(!isOpen));
+    document.body.classList.toggle("menu-open", isOpen);
+  };
+
+  menuOpenButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setMenuOpen(true);
+    });
+  });
+
+  menuCloseButton?.addEventListener("click", () => {
+    setMenuOpen(false);
+  });
+
+  menuOverlay.addEventListener("click", (event) => {
+    if (event.target === menuOverlay) {
+      setMenuOpen(false);
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuOverlay.classList.contains("is-open")) {
+      setMenuOpen(false);
+    }
+  });
+}
 
 if (scrollTopButton) {
   scrollTopButton.addEventListener("click", () => {
@@ -259,7 +292,12 @@ if (magazineSection && magazineStage && magazineStack && magazineCards.length) {
     });
 
     if (magazineOutro) {
-      magazineOutro.style.transform = `translateY(${-progress}px)`;
+      const lastIndex = magazineCards.length - 1;
+      const lastCardHeight = magazineCards[lastIndex]?.offsetHeight || 0;
+      const lastCardTranslateY = Math.max(collapsedOffsets[lastIndex], naturalOffsets[lastIndex] - progress);
+      const outroOffset = lastCardTranslateY + lastCardHeight + 40;
+
+      magazineOutro.style.transform = `translateY(${outroOffset}px)`;
     }
   };
 
@@ -304,7 +342,7 @@ if (magazineSection && magazineStage && magazineStack && magazineCards.length) {
     );
     const outroHeight = magazineOutro?.offsetHeight || 0;
     const sectionHeight =
-      64 + headerHeight + stackHeight + magazineScrollDistance + outroGap + outroHeight + outroBottomSpace + stickyTop;
+      64 + headerHeight + naturalOffsets[naturalOffsets.length - 1] + cardHeights[cardHeights.length - 1] + outroGap + outroHeight + outroBottomSpace + stickyTop;
 
     magazineStage.style.setProperty("--magazine-header-height", `${headerHeight}px`);
     magazineStage.style.setProperty("--magazine-scroll-distance", `${magazineScrollDistance}px`);

@@ -19,7 +19,7 @@
   <div class="sticky-header" id="stickyHeader" aria-hidden="true">
     <nav class="hero-nav scrolled">
       <div class="hero-actions">
-        <button class="icon-button icon-menu dark" aria-label="메뉴"></button>
+        <button class="icon-button icon-menu dark" aria-label="메뉴" data-menu-open></button>
         <button class="icon-button icon-search dark" aria-label="검색"></button>
       </div>
       <div class="brand-wordmark dark">
@@ -34,6 +34,88 @@
     </nav>
   </div>
 
+  <aside class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-panel" role="dialog" aria-modal="true" aria-labelledby="menuOverlayTitle">
+      <div class="menu-top-banner">상단 배너 영역입니다.</div>
+
+      <header class="menu-header">
+        <div class="hero-actions">
+          <button class="icon-button icon-close" id="menuCloseButton" aria-label="메뉴 닫기"></button>
+          <button class="icon-button icon-search dark" aria-label="검색"></button>
+        </div>
+        <div class="brand-wordmark dark menu-wordmark">
+          <img src="https://www.figma.com/api/mcp/asset/a110fb22-ca2c-48a9-b955-962622061474" alt="Glifree" />
+        </div>
+        <div class="hero-actions">
+          <button class="icon-button icon-user dark" aria-label="프로필"></button>
+          <button class="icon-button icon-cart dark" aria-label="장바구니">
+            <span class="cart-badge dark">99</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="menu-body">
+        <section class="menu-products" aria-labelledby="menuOverlayTitle">
+          <h2 class="sr-only" id="menuOverlayTitle">메뉴</h2>
+          <a href="#" class="menu-all-card">
+            <img
+              src="https://www.figma.com/api/mcp/asset/cdcdb655-b940-4166-b883-6d47ea1a8b46"
+              alt=""
+              class="menu-all-card-image"
+            />
+            <span>All</span>
+          </a>
+
+          <div class="menu-category-grid">
+            <a href="#" class="menu-category-card">
+              <span class="menu-category-thumb">
+                <img src="https://www.figma.com/api/mcp/asset/213cd91c-fcfb-4f85-9395-d825f3198aad" alt="" />
+              </span>
+              <span>Sets</span>
+            </a>
+            <a href="#" class="menu-category-card">
+              <span class="menu-category-thumb">
+                <img src="https://www.figma.com/api/mcp/asset/213cd91c-fcfb-4f85-9395-d825f3198aad" alt="" />
+              </span>
+              <span>Inner Care</span>
+            </a>
+            <a href="#" class="menu-category-card">
+              <span class="menu-category-thumb">
+                <img src="https://www.figma.com/api/mcp/asset/213cd91c-fcfb-4f85-9395-d825f3198aad" alt="" />
+              </span>
+              <span>Hair care</span>
+            </a>
+            <a href="#" class="menu-category-card">
+              <span class="menu-category-thumb">
+                <img src="https://www.figma.com/api/mcp/asset/213cd91c-fcfb-4f85-9395-d825f3198aad" alt="" />
+              </span>
+              <span>Skin care</span>
+            </a>
+          </div>
+        </section>
+
+        <nav class="menu-links" aria-label="메뉴 링크">
+          <button type="button" class="menu-link-row">
+            <span>Brand</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="M8 2V14" />
+              <path d="M2 8H14" />
+            </svg>
+          </button>
+          <button type="button" class="menu-link-row">
+            <span>Community</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="M8 2V14" />
+              <path d="M2 8H14" />
+            </svg>
+          </button>
+        </nav>
+
+        <div class="menu-auth">로그인 / 회원가입</div>
+      </div>
+    </div>
+  </aside>
+
   <main class="page">
     <section class="phone-shell">
       <section class="hero" id="heroSection">
@@ -45,7 +127,7 @@
               <div class="hero-banner">상단 배너 영역입니다.</div>
               <nav class="hero-nav">
                 <div class="hero-actions">
-                  <button class="icon-button icon-menu" aria-label="메뉴"></button>
+                  <button class="icon-button icon-menu" aria-label="메뉴" data-menu-open></button>
                   <button class="icon-button icon-search" aria-label="검색"></button>
                 </div>
                 <div class="brand-wordmark">
@@ -75,7 +157,7 @@
               <div class="hero-banner">Glifree City Proof Routine</div>
               <nav class="hero-nav">
                 <div class="hero-actions">
-                  <button class="icon-button icon-menu" aria-label="메뉴"></button>
+                  <button class="icon-button icon-menu" aria-label="메뉴" data-menu-open></button>
                   <button class="icon-button icon-search" aria-label="검색"></button>
                 </div>
                 <div class="brand-wordmark">
@@ -105,7 +187,7 @@
               <div class="hero-banner">Ingredient Story</div>
               <nav class="hero-nav">
                 <div class="hero-actions">
-                  <button class="icon-button icon-menu" aria-label="메뉴"></button>
+                  <button class="icon-button icon-menu" aria-label="메뉴" data-menu-open></button>
                   <button class="icon-button icon-search" aria-label="검색"></button>
                 </div>
                 <div class="brand-wordmark">
@@ -449,6 +531,7 @@
               <span class="paren">)</span>
             </a>
           </div>
+
         </div>
       </section>
 
@@ -502,14 +585,13 @@
               <li>magazine</li>
             </ul>
           </div>
-        </div>
-
-        <div class="footer-community">
-          <h3>Community</h3>
-          <ul>
-            <li>기업구매</li>
-            <li>membership</li>
-          </ul>
+          <div class="footer-community">
+            <h3>Community</h3>
+            <ul>
+              <li>기업구매</li>
+              <li>membership</li>
+            </ul>
+          </div>
         </div>
 
         <button class="top-link" id="scrollTopButton">
