@@ -249,8 +249,6 @@ img {
   background: #f2f4f2;
   opacity: 0;
   pointer-events: none;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
   transition: opacity 180ms ease;
 }
 
@@ -261,9 +259,11 @@ img {
 
 .menu-panel {
   width: min(100vw, var(--shell-max-width));
-  min-height: 100vh;
+  height: 100vh;
   background: #fff;
   color: #222;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .menu-top-banner {
