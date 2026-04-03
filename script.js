@@ -134,6 +134,7 @@ if (heroTrack && heroSlider && heroDots.length) {
 
 if (productsScroll && productsSlider) {
   const productCards = Array.from(productsScroll.querySelectorAll(".product-card"));
+  const coarsePointerQuery = window.matchMedia("(pointer: coarse)");
   let startX = 0;
   let dragOffset = 0;
   let isPointerDown = false;
@@ -179,6 +180,23 @@ if (productsScroll && productsSlider) {
     updateProductsProgress(clampedIndex);
   };
 
+  const setActiveProduct = (index) => {
+    const clampedIndex = Math.max(0, Math.min(index, productCards.length - 1));
+    currentProductIndex = clampedIndex;
+
+    productCards.forEach((card, cardIndex) => {
+      card.classList.toggle("is-active", cardIndex === clampedIndex);
+    });
+
+    updateProductsProgress(clampedIndex);
+  };
+
+  const updateProductsFromNativeScroll = () => {
+    const step = getProductStep();
+    const index = step > 0 ? Math.round(productsSlider.scrollLeft / step) : 0;
+    setActiveProduct(index);
+  };
+
   const onProductsPointerDown = (event) => {
     if (event.pointerType === "mouse" && event.button !== 0) return;
     isPointerDown = true;
@@ -212,16 +230,23 @@ if (productsScroll && productsSlider) {
     renderProductsIndex(currentProductIndex);
   };
 
-  productsScroll.addEventListener("pointerdown", onProductsPointerDown);
-  productsScroll.addEventListener("pointermove", onProductsPointerMove);
-  productsScroll.addEventListener("pointerup", onProductsPointerUp);
-  productsScroll.addEventListener("pointerleave", onProductsPointerUp);
-  productsScroll.addEventListener("pointercancel", onProductsPointerUp);
-  window.addEventListener("resize", () => {
-    renderProductsIndex(currentProductIndex, "auto");
-  });
+  if (coarsePointerQuery.matches) {
+    productsSlider.classList.add("is-native-swipe");
+    productsSlider.addEventListener("scroll", updateProductsFromNativeScroll, { passive: true });
+    window.addEventListener("resize", updateProductsFromNativeScroll);
+    setActiveProduct(0);
+  } else {
+    productsScroll.addEventListener("pointerdown", onProductsPointerDown);
+    productsScroll.addEventListener("pointermove", onProductsPointerMove);
+    productsScroll.addEventListener("pointerup", onProductsPointerUp);
+    productsScroll.addEventListener("pointerleave", onProductsPointerUp);
+    productsScroll.addEventListener("pointercancel", onProductsPointerUp);
+    window.addEventListener("resize", () => {
+      renderProductsIndex(currentProductIndex, "auto");
+    });
 
-  renderProductsIndex(0, "auto");
+    renderProductsIndex(0, "auto");
+  }
 }
 
 if (productsSwipeBadge) {
