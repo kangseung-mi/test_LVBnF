@@ -1,73 +1,154 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glifree Design Implementation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="page">
-      <section class="phone-shell">
-        <section class="hero">
-          <img
-            class="hero-image"
-            src="https://www.figma.com/api/mcp/asset/8d22d19e-f20e-4ca6-8cd8-84e5ad96e3ec"
-            alt="Glifree hero"
-          />
-          <div class="hero-banner">상단 배너 영역입니다.</div>
 
-          <nav class="hero-nav">
-            <div class="hero-actions">
-              <button class="icon-button icon-menu" aria-label="메뉴"></button>
-              <button class="icon-button icon-search" aria-label="검색"></button>
-            </div>
-            <div class="brand-wordmark">Glifree</div>
-            <div class="hero-actions">
-              <button class="icon-button icon-user" aria-label="프로필"></button>
-              <button class="icon-button icon-cart" aria-label="장바구니">
-                <span class="cart-badge">99</span>
-              </button>
-            </div>
-          </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glifree Design Implementation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 
-          <div class="hero-copy">
-            <p class="hero-kicker">[ <em>Glifree</em> ]</p>
-            <h1>Proof Youth Routine</h1>
-            <p class="hero-subcopy">
-              도시의 소음과 공해, 스트레스 속에서도 나만의 맑음을 유지
-            </p>
+<body>
+  <div class="sticky-header" id="stickyHeader" aria-hidden="true">
+    <nav class="hero-nav scrolled">
+      <div class="hero-actions">
+        <button class="icon-button icon-menu dark" aria-label="메뉴"></button>
+        <button class="icon-button icon-search dark" aria-label="검색"></button>
+      </div>
+      <div class="brand-wordmark dark">
+        <img src="https://www.figma.com/api/mcp/asset/a110fb22-ca2c-48a9-b955-962622061474" alt="Glifree" />
+      </div>
+      <div class="hero-actions">
+        <button class="icon-button icon-user dark" aria-label="프로필"></button>
+        <button class="icon-button icon-cart dark" aria-label="장바구니">
+          <span class="cart-badge dark">99</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <main class="page">
+    <section class="phone-shell">
+      <section class="hero" id="heroSection">
+        <div class="hero-slider" id="heroSlider">
+          <div class="hero-track" id="heroTrack">
+            <article class="hero-slide is-active">
+              <img class="hero-image" src="https://www.figma.com/api/mcp/asset/fd4d308d-c993-45db-adef-6fe3ef66dd1b"
+                alt="Glifree hero 1" />
+              <div class="hero-banner">상단 배너 영역입니다.</div>
+              <nav class="hero-nav">
+                <div class="hero-actions">
+                  <button class="icon-button icon-menu" aria-label="메뉴"></button>
+                  <button class="icon-button icon-search" aria-label="검색"></button>
+                </div>
+                <div class="brand-wordmark">
+                  <img src="https://www.figma.com/api/mcp/asset/7ed52b65-ba0a-4ff2-9d25-66b77b6cc6e4" alt="Glifree" />
+                </div>
+                <div class="hero-actions">
+                  <button class="icon-button icon-user" aria-label="프로필"></button>
+                  <button class="icon-button icon-cart" aria-label="장바구니">
+                    <span class="cart-badge">99</span>
+                  </button>
+                </div>
+              </nav>
+              <div class="hero-copy">
+                <h1 class="hero-title">
+                  <span class="hero-title-brand">[ <em>Glifree</em> ]</span>
+                  <span class="hero-title-main">Proof Youth Routine</span>
+                </h1>
+                <p class="hero-subcopy">
+                  도시의 소음과 공해, 스트레스 속에서도 나만의 맑음을 유지
+                </p>
+              </div>
+            </article>
+
+            <article class="hero-slide">
+              <img class="hero-image" src="https://www.figma.com/api/mcp/asset/7d2a11ca-6c08-4cf4-b168-9de6c36d89dc"
+                alt="Glifree hero 2" />
+              <div class="hero-banner">Glifree City Proof Routine</div>
+              <nav class="hero-nav">
+                <div class="hero-actions">
+                  <button class="icon-button icon-menu" aria-label="메뉴"></button>
+                  <button class="icon-button icon-search" aria-label="검색"></button>
+                </div>
+                <div class="brand-wordmark">
+                  <img src="https://www.figma.com/api/mcp/asset/7ed52b65-ba0a-4ff2-9d25-66b77b6cc6e4" alt="Glifree" />
+                </div>
+                <div class="hero-actions">
+                  <button class="icon-button icon-user" aria-label="프로필"></button>
+                  <button class="icon-button icon-cart" aria-label="장바구니">
+                    <span class="cart-badge">99</span>
+                  </button>
+                </div>
+              </nav>
+              <div class="hero-copy">
+                <h1 class="hero-title">
+                  <span class="hero-title-brand">[ <em>Glifree</em> ]</span>
+                  <span class="hero-title-main">City Proof Glow</span>
+                </h1>
+                <p class="hero-subcopy">
+                  바쁜 하루 속에서도 균형 잡힌 웰니스를 이어가는 새로운 루틴
+                </p>
+              </div>
+            </article>
+
+            <article class="hero-slide">
+              <img class="hero-image" src="https://www.figma.com/api/mcp/asset/393fe3bd-a49e-4193-9974-f24c8af62c59"
+                alt="Glifree hero 3" />
+              <div class="hero-banner">Ingredient Story</div>
+              <nav class="hero-nav">
+                <div class="hero-actions">
+                  <button class="icon-button icon-menu" aria-label="메뉴"></button>
+                  <button class="icon-button icon-search" aria-label="검색"></button>
+                </div>
+                <div class="brand-wordmark">
+                  <img src="https://www.figma.com/api/mcp/asset/7ed52b65-ba0a-4ff2-9d25-66b77b6cc6e4" alt="Glifree" />
+                </div>
+                <div class="hero-actions">
+                  <button class="icon-button icon-user" aria-label="프로필"></button>
+                  <button class="icon-button icon-cart" aria-label="장바구니">
+                    <span class="cart-badge">99</span>
+                  </button>
+                </div>
+              </nav>
+              <div class="hero-copy">
+                <h1 class="hero-title">
+                  <span class="hero-title-brand">[ <em>Glifree</em> ]</span>
+                  <span class="hero-title-main">Ingredient Balance</span>
+                </h1>
+                <p class="hero-subcopy">
+                  성분 하나하나의 역할을 직관적으로 보여주는 클린 웰니스 큐레이션
+                </p>
+              </div>
+            </article>
           </div>
+        </div>
 
-          <div class="progress"><span></span></div>
-        </section>
+        <div class="progress light hero-progress" id="heroProgress" aria-label="메인 배너 페이지네이션">
+          <button class="hero-dot is-active" type="button" aria-label="1번 배너"></button>
+          <button class="hero-dot" type="button" aria-label="2번 배너"></button>
+          <button class="hero-dot" type="button" aria-label="3번 배너"></button>
+        </div>
+      </section>
 
-        <section class="section products">
-          <div class="section-head">
-            <h2>Best Sellers</h2>
-            <a href="#" class="view-all"><span class="paren">(</span><span>View all</span><img src="https://www.figma.com/api/mcp/asset/3e92a013-6db5-48df-9406-b0345ceafd86" alt="" /><span class="paren">)</span></a>
-          </div>
+      <section class="section products" id="productsSection">
+        <div class="section-head">
+          <h2>Best Sellers</h2>
+        </div>
 
-          <div class="product-row">
+        <div class="products-slider" id="productsSlider">
+          <div class="horizontal-scroll products-scroll" id="productsScroll">
             <article class="product-card">
               <span class="pill green">new</span>
               <div class="product-image-wrap">
-                <img
-                  src="https://www.figma.com/api/mcp/asset/52a066c3-e4e2-486a-9a44-836911ad7175"
-                  alt="젤리포 제품"
-                />
+                <img src="https://www.figma.com/api/mcp/asset/52a066c3-e4e2-486a-9a44-836911ad7175" alt="젤리포 제품" />
                 <button class="pill white">cart</button>
               </div>
               <div class="product-info">
@@ -80,14 +161,75 @@
               </div>
             </article>
 
-            <article class="product-card ghost-card" aria-hidden="true">
+            <article class="product-card">
               <span class="pill green">new</span>
               <div class="product-image-wrap">
-                <img
-                  src="https://www.figma.com/api/mcp/asset/52a066c3-e4e2-486a-9a44-836911ad7175"
-                  alt=""
-                />
-                <span class="pill white">cart</span>
+                <img src="https://www.figma.com/api/mcp/asset/a30652f7-6842-4450-92cc-de2116945a07" alt="젤리포 제품" />
+                <button class="pill white">cart</button>
+              </div>
+              <div class="product-info">
+                <h3>[ <em>Glifree</em> ] 젤리포</h3>
+                <p class="price-line">
+                  <strong class="sale">99%</strong>
+                  <strong>1,000,000원</strong>
+                  <span>1,000,000원</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="pill green">new</span>
+              <div class="product-image-wrap">
+                <img src="https://www.figma.com/api/mcp/asset/a30652f7-6842-4450-92cc-de2116945a07" alt="젤리포 제품" />
+                <button class="pill white">cart</button>
+              </div>
+              <div class="product-info">
+                <h3>[ <em>Glifree</em> ] 젤리포</h3>
+                <p class="price-line">
+                  <strong class="sale">99%</strong>
+                  <strong>1,000,000원</strong>
+                  <span>1,000,000원</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="pill green">new</span>
+              <div class="product-image-wrap">
+                <img src="https://www.figma.com/api/mcp/asset/52a066c3-e4e2-486a-9a44-836911ad7175" alt="젤리포 제품" />
+                <button class="pill white">cart</button>
+              </div>
+              <div class="product-info">
+                <h3>[ <em>Glifree</em> ] 젤리포</h3>
+                <p class="price-line">
+                  <strong class="sale">99%</strong>
+                  <strong>1,000,000원</strong>
+                  <span>1,000,000원</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="pill green">new</span>
+              <div class="product-image-wrap">
+                <img src="https://www.figma.com/api/mcp/asset/a30652f7-6842-4450-92cc-de2116945a07" alt="젤리포 제품" />
+                <button class="pill white">cart</button>
+              </div>
+              <div class="product-info">
+                <h3>[ <em>Glifree</em> ] 젤리포</h3>
+                <p class="price-line">
+                  <strong class="sale">99%</strong>
+                  <strong>1,000,000원</strong>
+                  <span>1,000,000원</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="pill green">new</span>
+              <div class="product-image-wrap">
+                <img src="https://www.figma.com/api/mcp/asset/52a066c3-e4e2-486a-9a44-836911ad7175" alt="젤리포 제품" />
+                <button class="pill white">cart</button>
               </div>
               <div class="product-info">
                 <h3>[ <em>Glifree</em> ] 젤리포</h3>
@@ -99,170 +241,329 @@
               </div>
             </article>
           </div>
+        </div>
 
-          <div class="progress dark"><span></span></div>
-        </section>
+        <div class="progress dark products-progress" id="productsProgress"><span></span></div>
+        <div class="swipe-badge" id="productsSwipeBadge">swipe</div>
+      </section>
 
-        <section class="section story">
-          <p class="story-copy">
-            [Glifree]<br />
-            가볍고 즐겁게, 매일 챙기는<br />
-            웰니스 식품의 새로운 기준
-          </p>
+      <section class="section story">
+        <p class="story-copy">
+          [<em>Glifree</em>]<br />
+          가볍게, 즐겁게, 매일 챙기는<br />
+          웰니스 식품의 새로운 기준
+        </p>
 
-          <div class="ingredient-list">
-            <article class="ingredient-card">
-              <img
-                src="https://www.figma.com/api/mcp/asset/35b74a01-597d-4a1b-887b-c1c5b9776d3a"
-                alt="건강한 원료 소개"
-              />
-              <div class="ingredient-overlay">
-                <h3>깨끗, 맑은 나를 만드는 힘</h3>
-                <p>바쁜 도시 생활 속에서도 균형을 회복하는 루틴</p>
-                <button class="round-more">more</button>
-              </div>
-            </article>
+        <div class="ingredient-list">
+          <article class="ingredient-card ingredient-card--glow" data-ingredient-card>
+            <img src="https://www.figma.com/api/mcp/asset/5b581e77-3f4d-4330-8f99-741fbbaa29cc" alt="카르노신 성분" />
+            <div class="ingredient-topcopy">
+              <p>손상을 막는 Perfect Shield</p>
+              <h3>카르노신</h3>
+            </div>
+            <button class="more-tab" aria-label="더 보기" data-ingredient-open>
+              <svg class="more-tab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 6V18" />
+                <path d="M6 12H18" />
+              </svg>
+            </button>
+            <div class="ingredient-detail-panel" aria-hidden="true">
+              <p>
+                카르노신에 대한 설명을 적는 공간입니다. 최대 3줄까지 노출이 가능하고 그
+                이후에는 말줄임표 (...) 표시로 노출됩니다. 따로 이동하는 버튼이 없으니
+                최대한 5줄 이내로 작성하시기 바랍니다.
+              </p>
+              <button class="close-button" aria-label="닫기" data-ingredient-close>
+                <svg class="close-button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7 7L17 17" />
+                  <path d="M17 7L7 17" />
+                </svg>
+              </button>
+            </div>
+          </article>
 
-            <article class="ingredient-card tall">
-              <img
-                src="https://www.figma.com/api/mcp/asset/853a3288-6a69-49f4-92f8-7759e7d81ba3"
-                alt="원료 디테일"
-              />
-            </article>
+          <article class="ingredient-card" data-ingredient-card>
+            <img src="https://www.figma.com/api/mcp/asset/83869238-fbcc-4a72-8e80-2353d33e2bea" alt="아데노신 성분" />
+            <div class="ingredient-topcopy">
+              <p>주름 개선 및 탄력 증진 효과</p>
+              <h3>아데노신</h3>
+            </div>
+            <button class="more-tab" aria-label="더 보기" data-ingredient-open>
+              <svg class="more-tab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 6V18" />
+                <path d="M6 12H18" />
+              </svg>
+            </button>
+            <div class="ingredient-detail-panel" aria-hidden="true">
+              <p>
+                주름 개선 및 탄력 증진 효과에 대한 설명을 적는 공간입니다. 최대 3줄까지
+                노출이 가능하고, 이후에는 말줄임표 (...) 표시로 노출됩니다.
+              </p>
+              <button class="close-button" aria-label="닫기" data-ingredient-close>
+                <svg class="close-button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7 7L17 17" />
+                  <path d="M17 7L7 17" />
+                </svg>
+              </button>
+            </div>
+          </article>
 
-            <article class="ingredient-card small">
-              <img
-                src="https://www.figma.com/api/mcp/asset/72dee45e-d1f7-45b2-a3fc-9c2a6bd6d15b"
-                alt="나이아신아마이드"
-              />
-            </article>
-          </div>
+          <article class="ingredient-card" data-ingredient-card>
+            <img src="https://www.figma.com/api/mcp/asset/b2bec032-6607-49c6-98c3-8090301651f3" alt="나이아신아마이드 성분" />
+            <div class="ingredient-topcopy">
+              <p>미백 및 색소 침착 개선</p>
+              <h3>나이아신아마이드</h3>
+            </div>
+            <button class="more-tab" aria-label="더 보기" data-ingredient-open>
+              <svg class="more-tab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 6V18" />
+                <path d="M6 12H18" />
+              </svg>
+            </button>
+            <div class="ingredient-detail-panel" aria-hidden="true">
+              <p>
+                미백 및 색소 침착 개선에 대한 설명을 적는 공간입니다. 최대 3줄까지
+                노출이 가능하고, 이후에는 말줄임표 (...) 표시로 노출됩니다.
+              </p>
+              <button class="close-button" aria-label="닫기" data-ingredient-close>
+                <svg class="close-button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7 7L17 17" />
+                  <path d="M17 7L7 17" />
+                </svg>
+              </button>
+            </div>
+          </article>
+        </div>
 
-          <a href="#" class="view-all large"><span class="paren">(</span><span>View all</span><img src="https://www.figma.com/api/mcp/asset/1a71a53f-d2e3-48b8-a4f4-7b61ab294da7" alt="" /><span class="paren">)</span></a>
-        </section>
+        <a href="#" class="view-all large story-view-all">
+          <span class="paren">(</span>
+          <span>View all</span>
+          <svg class="view-all-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 12H19" />
+            <path d="M13.5 6.5L19 12L13.5 17.5" />
+          </svg>
+          <span class="paren">)</span>
+        </a>
+      </section>
 
-        <section class="banner-section">
-          <article class="banner-card">
-            <img
-              src="https://www.figma.com/api/mcp/asset/ea63ccb2-d106-4b41-8593-75fbf3da4402"
-              alt="City-Proof Youth Routine 배너"
-            />
+      <section class="banner-section">
+        <article class="banner-card">
+          <div class="banner-surface">
+            <img src="https://www.figma.com/api/mcp/asset/9beb2b4f-578b-4f2c-9db5-cd8366bf8cff"
+              alt="City-Proof Youth Routine 배너" />
             <div class="banner-content">
               <h2>City<br />- Proof Youth Routine</h2>
               <p>
                 가볍게, 즐겁게, 매일 챙기는<br />
                 웰니스 식품의 새로운 기준
               </p>
-              <button class="orb-button">more</button>
             </div>
-          </article>
-        </section>
+          </div>
+          <button class="orb-button">
+            <span>more</span>
+            <svg class="orb-button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 6V18" />
+              <path d="M6 12H18" />
+            </svg>
+          </button>
+        </article>
+      </section>
 
-        <section class="routine-text">
-          <p>[ Glifree ] City - Proof Youth Routine</p>
-        </section>
+      <section class="routine-text">
+        <div class="routine-marquee">
+          <p>
+            <span>[ Glifree ] City - Proof Youth Routine</span>
+            <span>[ Glifree ] City - Proof Youth Routine</span>
+            <span>[ Glifree ] City - Proof Youth Routine</span>
+          </p>
+        </div>
+      </section>
 
-        <section class="section magazine">
-          <div class="section-head single">
+      <section class="section magazine">
+        <div class="magazine-stage" id="magazineStage">
+          <div class="section-head single magazine-header">
             <h2>Magazine</h2>
           </div>
 
-          <article class="magazine-card">
-            <img
-              src="https://www.figma.com/api/mcp/asset/1c08ff2c-2e95-40ab-915d-84b1d5e7b90e"
-              alt="매거진 메인"
-            />
-            <div class="magazine-text">
-              <h3>매거진 제목을 2줄까지만 적어주세요. 그 이상은 노출되지 않습니다.</h3>
-              <p>
-                매거진에 적힌 내용입니다. 최대 3줄까지 노출되며 가장 최신 매거진 글이
-                노출됩니다. 원하는 글로 고정도 가능합니다.
-              </p>
-            </div>
-          </article>
+          <div class="magazine-stack" id="magazineStack" aria-label="Magazine list">
+            <article class="magazine-stack-item" data-magazine-card data-card-index="0" style="--stack-index: 1;">
+              <div class="magazine-sticky-card">
+                <div class="magazine-card-media">
+                  <img src="https://www.figma.com/api/mcp/asset/e9ff8204-6f4c-44fb-8a74-33ceaa4ad163"
+                    alt="inner care 매거진 이미지" />
+                  <span class="magazine-chip magazine-chip--light">inner care</span>
+                </div>
+                <div class="magazine-card-body">
+                  <h3>매거진 제목을 2줄까지만 적어주세요. 그 이상은 노출되지 않습니다.</h3>
+                  <p>
+                    매거진에 적힌 내용입니다. 최대 3줄까지 노출되며 가장 최신 매거진 글이
+                    노출됩니다. 원하는 글로 고정도 가능합니다.
+                  </p>
+                </div>
+              </div>
+            </article>
 
-          <div class="progress dark"><span></span></div>
-          <a href="#" class="view-all large"><span class="paren">(</span><span>View all</span><img src="https://www.figma.com/api/mcp/asset/1a71a53f-d2e3-48b8-a4f4-7b61ab294da7" alt="" /><span class="paren">)</span></a>
-        </section>
+            <article class="magazine-stack-item" data-magazine-card data-card-index="1" style="--stack-index: 2;">
+              <div class="magazine-sticky-card">
+                <div class="magazine-card-media">
+                  <img src="https://www.figma.com/api/mcp/asset/1ea93d88-e38d-41bc-880d-09d957282f07"
+                    alt="hair care 매거진 이미지" />
+                  <span class="magazine-chip magazine-chip--dark">hair care</span>
+                </div>
+                <div class="magazine-card-body">
+                  <h3>매거진 제목을 2줄까지만 적어주세요. 그 이상은 노출되지 않습니다.</h3>
+                  <p>
+                    매거진에 적힌 내용입니다. 최대 3줄까지 노출되며 가장 최신 매거진 글이
+                    노출됩니다. 원하는 글로 고정도 가능합니다.
+                  </p>
+                </div>
+              </div>
+            </article>
 
-        <section class="section instagram">
-          <div class="section-head single">
-            <h2>Instagram</h2>
+            <article class="magazine-stack-item" data-magazine-card data-card-index="2" style="--stack-index: 3;">
+              <div class="magazine-sticky-card">
+                <div class="magazine-card-media">
+                  <img src="https://www.figma.com/api/mcp/asset/391fa218-8642-4632-ab40-64702c26aaad"
+                    alt="skin care 매거진 이미지" />
+                  <span class="magazine-chip magazine-chip--light">skin care</span>
+                </div>
+                <div class="magazine-card-body">
+                  <h3>매거진 제목을 2줄까지만 적어주세요. 그 이상은 노출되지 않습니다.</h3>
+                  <p>
+                    매거진에 적힌 내용입니다. 최대 3줄까지 노출되며 가장 최신 매거진 글이
+                    노출됩니다. 원하는 글로 고정도 가능합니다.
+                  </p>
+                </div>
+              </div>
+            </article>
           </div>
 
+          <div class="magazine-outro">
+            <a href="#" class="view-all large magazine-view-all">
+              <span class="paren">(</span>
+              <span>View all</span>
+              <svg class="view-all-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 12H19" />
+                <path d="M13.5 6.5L19 12L13.5 17.5" />
+              </svg>
+              <span class="paren">)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section instagram">
+        <div class="section-head single instagram-head">
+          <h2>Instagram</h2>
+        </div>
+
+        <div class="instagram-body">
+          <div class="instagram-wrap">
           <div class="instagram-grid">
-            <img src="https://www.figma.com/api/mcp/asset/8dabc8c9-41cf-48d4-8289-9d7f8806a046" alt="인스타그램 썸네일 1" />
-            <img src="https://www.figma.com/api/mcp/asset/e7bcd281-43ba-4cc1-8814-15718fe6ec6c" alt="인스타그램 썸네일 2" />
-            <img src="https://www.figma.com/api/mcp/asset/ce93e8ae-55b1-41c7-b037-9b58c6572ca4" alt="인스타그램 썸네일 3" />
-            <img src="https://www.figma.com/api/mcp/asset/c4c54d6e-5e60-4147-a3b0-d79d3f5cad55" alt="인스타그램 썸네일 4" />
-            <img src="https://www.figma.com/api/mcp/asset/5ecbefdc-3481-4d05-b8c4-42cee61a2ae9" alt="인스타그램 썸네일 5" />
-            <img src="https://www.figma.com/api/mcp/asset/a223e64d-e41b-44b7-80f8-d1f5563a71a7" alt="인스타그램 썸네일 6" />
-            <div class="instagram-handle">@glifree_official</div>
-          </div>
-        </section>
-
-        <footer class="footer">
-          <div class="footer-logo">Glifree</div>
-
-          <div class="footer-menus">
-            <div>
-              <h3>Products</h3>
-              <ul>
-                <li>all</li>
-                <li>inner care</li>
-                <li>hair care</li>
-                <li>skin care</li>
-              </ul>
+            <div class="instagram-row instagram-row--top">
+              <img src="https://www.figma.com/api/mcp/asset/cad0fec9-2132-40fd-b008-418ac00b1a97" alt="인스타그램 썸네일 1" />
+              <img src="https://www.figma.com/api/mcp/asset/cf4b44f1-ad68-4628-81b7-c729d30540dc" alt="인스타그램 썸네일 2" />
+              <img src="https://www.figma.com/api/mcp/asset/0738d698-71fc-4fc0-b63a-cf398f492098" alt="인스타그램 썸네일 3" />
             </div>
-            <div>
-              <h3>Brand</h3>
-              <ul>
-                <li>about</li>
-                <li>ingredients</li>
-                <li>magazine</li>
-              </ul>
+            <div class="instagram-row instagram-row--bottom">
+              <img src="https://www.figma.com/api/mcp/asset/fdfb67a5-e703-40ac-9366-7a492c689092" alt="인스타그램 썸네일 4" />
+              <img src="https://www.figma.com/api/mcp/asset/2967a3f7-53cf-4575-998f-6bb569b26d40" alt="인스타그램 썸네일 5" />
+              <img src="https://www.figma.com/api/mcp/asset/a1567452-d256-4be4-a8b9-4e7ed19d37fe" alt="인스타그램 썸네일 6" />
             </div>
           </div>
+          <div class="instagram-handle">@glifree_official</div>
+          <!-- <div class="swipe-badge instagram-swipe">swipe</div> -->
+        </div>
+        </div>
+      </section>
 
-          <div class="footer-community">
-            <h3>Community</h3>
+      <footer class="footer">
+        <img
+          src="https://www.figma.com/api/mcp/asset/b778c1eb-b8d1-466f-b84a-5ee05fe2c51c"
+          alt="Glifree"
+          class="footer-logo"
+        />
+
+        <div class="footer-menus">
+          <div>
+            <h3>Products</h3>
             <ul>
-              <li>기업구매</li>
-              <li>membership</li>
+              <li>all</li>
+              <li>inner care</li>
+              <li>hair care</li>
+              <li>skin care</li>
             </ul>
           </div>
-
-          <button class="top-link" id="scrollTopButton"><span class="paren">(</span><span>Top</span><img src="https://www.figma.com/api/mcp/asset/ab68bb8d-a004-4380-a0df-29862ac47b62" alt="" /><span class="paren">)</span></button>
-
-          <div class="customer-center">
-            <h3>Customer Center</h3>
-            <strong>070-8865-4600</strong>
-            <dl>
-              <div>
-                <dt>상담시간</dt>
-                <dd>월 - 금 9:00 - 17:00</dd>
-              </div>
-              <div>
-                <dt>점심시간</dt>
-                <dd>월 - 금 11:30 - 13:00<br />주말 및 공휴일 휴무</dd>
-              </div>
-              <div>
-                <dt>이메일</dt>
-                <dd>bnf-cs@logisvalley.com</dd>
-              </div>
-            </dl>
+          <div>
+            <h3>Brand</h3>
+            <ul>
+              <li>about</li>
+              <li>ingredients</li>
+              <li>magazine</li>
+            </ul>
           </div>
+        </div>
 
-          <div class="footer-links">
-            <button>Shopping Guide</button>
-            <button>Company Information</button>
-          </div>
+        <div class="footer-community">
+          <h3>Community</h3>
+          <ul>
+            <li>기업구매</li>
+            <li>membership</li>
+          </ul>
+        </div>
 
-          <p class="copyright">Copyright ⓒ TIMOTHY1844 All Rights Reserved.</p>
-        </footer>
-      </section>
-    </main>
+        <button class="top-link" id="scrollTopButton">
+          <span class="paren">(</span>
+          <span>Top</span>
+          <svg class="top-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 19V5" />
+            <path d="M6.5 10.5L12 5L17.5 10.5" />
+          </svg>
+          <span class="paren">)</span>
+        </button>
 
-    <script src="./script.js"></script>
-  </body>
+        <div class="customer-center">
+          <h3>Customer Center</h3>
+          <strong>070-8865-4600</strong>
+          <dl>
+            <div>
+              <dt>상담시간</dt>
+              <dd>월 - 금 9:00 - 17:00</dd>
+            </div>
+            <div>
+              <dt>점심시간</dt>
+              <dd>월 - 금 11:30 - 13:00<br />주말 및 공휴일 휴무</dd>
+            </div>
+            <div>
+              <dt>이메일</dt>
+              <dd>bnf-cs@logisvalley.com</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="footer-links">
+          <button>
+            <span>Shopping Guide</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="M8 2V14" />
+              <path d="M2 8H14" />
+            </svg>
+          </button>
+          <button>
+            <span>Company Information</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="M8 2V14" />
+              <path d="M2 8H14" />
+            </svg>
+          </button>
+        </div>
+
+        <p class="copyright">Copyright ⓒ TIMOTHY1844 All Rights Reserved.</p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
